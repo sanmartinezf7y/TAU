@@ -1,4 +1,4 @@
-package chap6;
+package JavaProgramming.chap6;
     /*
     • Enhance the Phone Bill exercise by redoing it in an object-oriented Style.
     • A Phone bill should have an id, base cost, number of allotted minutes, and
@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class PhoneBillCalculatorOOP {
     Scanner scanner = new Scanner(System.in);
 
-    public User newUser(){
+    public chap6.User newUser(){
         System.out.println("Input user ID: ");
         int id = scanner.nextInt();
         System.out.println("Input plan cost: ");
@@ -24,7 +24,7 @@ public class PhoneBillCalculatorOOP {
         System.out.println("Input the user's used minutes: ");
         int usedMinutes = scanner.nextInt();
 
-        return new User(id, plan, allottedMinutes, usedMinutes);
+        return new chap6.User(id, plan, allottedMinutes, usedMinutes);
     }
 
     public static void main(String[] args) {
@@ -32,7 +32,7 @@ public class PhoneBillCalculatorOOP {
         PhoneBillCalculatorOOP calculator = new PhoneBillCalculatorOOP();
         do{
 
-            User newUser = calculator.newUser();
+            chap6.User newUser = calculator.newUser();
 
             newUser.printBill();
             System.out.print("Print new user bill? Y/N ");
@@ -40,8 +40,5 @@ public class PhoneBillCalculatorOOP {
             choice = input.charAt(0);
 
         }while (choice == 'y' || choice == 'Y');
-
     }
-
-
 }

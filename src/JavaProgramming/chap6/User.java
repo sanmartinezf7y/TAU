@@ -60,7 +60,11 @@ public class User {
     public double calculateOverage(){
         int allottedMinutes = getAllottedMinutes();
         int usedMinutes = getUsedMinutes();
-        return (usedMinutes - allottedMinutes)*costPerMinute;
+        double overage = (usedMinutes - allottedMinutes)*costPerMinute;
+        if (overage<=0){
+            return 0;
+        }else return overage;
+
     }
 
     public double calculateTax(){
