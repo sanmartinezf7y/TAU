@@ -1,4 +1,4 @@
-package chap6;
+package JavaProgramming.chap6;
 
 import java.util.Scanner;
 
@@ -8,8 +8,8 @@ public class HomeAreaCalculatorRedo {
     public static void main(String[] args) {
 
         HomeAreaCalculatorRedo calculator = new HomeAreaCalculatorRedo();
-        Rectangle kitchen = calculator.getRoom();
-        Rectangle bathroom = calculator.getRoom();
+        chap6.Rectangle kitchen = calculator.getRoom();
+        chap6.Rectangle bathroom = calculator.getRoom();
 
         double area = calculator.calculateTotalArea(kitchen,bathroom);
 
@@ -17,7 +17,7 @@ public class HomeAreaCalculatorRedo {
         calculator.scanner.close();
     }
 
-    public Rectangle getRoom(){
+    public chap6.Rectangle getRoom(){
 
         System.out.println("Input room length:");
         double length = scanner.nextDouble();
@@ -25,10 +25,10 @@ public class HomeAreaCalculatorRedo {
         double width = scanner.nextDouble();
 
 
-        return new Rectangle(length,width);
+        return new chap6.Rectangle(length,width);
     }
 
-    public double calculateTotalArea(Rectangle rectangle1, Rectangle rectangle2){
+    public double calculateTotalArea(chap6.Rectangle rectangle1, chap6.Rectangle rectangle2){
         return rectangle1.calculateArea() + rectangle2.calculateArea();
     }
 
